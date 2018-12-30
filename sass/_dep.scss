@@ -1,0 +1,32 @@
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+
+$black: black;
+$white: #fff;
+$spaceVal: 3rem;
+$radius: 6px;
+$headerHeight: 4.5rem;
+
+body {
+  background: $white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mukta', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  position: relative;
+  display: inline-block;
+}
+
