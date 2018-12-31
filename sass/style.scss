@@ -131,7 +131,8 @@ section{
     }
     &.gallery-main{
         display: flex;
-        align-content: center;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         .banner{
             overflow: hidden;
@@ -154,7 +155,7 @@ section{
 
             }
             .arrow{
-                z-index: 1;
+                z-index: 2;
                 width: 2rem;
                 background: darken($white, 10%);
                 position: absolute;
@@ -175,6 +176,62 @@ section{
                         transform: scaleX(1) translateX(0%);                    
                     }
                 }
+            }
+            .img-con{
+                height: 100%;
+                width: 100%;
+                .banner-img{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+                    &:nth-child(1){
+                        transform: translateX(-100%) scale(1.2) skewX(10deg);
+                    }
+                    &:nth-child(2){
+                        z-index: 1;
+                        transform: translateX(0%) scale(1) skewX(0deg);
+                    }
+                    &:nth-child(3){
+                        transform: translateX(100%) scale(1.2) skewX(-10deg);
+                    }
+                    &:nth-child(4){
+                        transform: translateX(100%) scale(1.2) skewX(-10deg);
+                    }
+                    &:nth-child(5){
+                        transform: translateX(100%) scale(1.2) skewX(-10deg);
+                    }
+                }
+            }
+        }
+        .head{
+            text-align: center;
+            h1{
+                font-family: 'Rubik', sans-serif;
+                color: lighten($black, 20%);
+                font-size: 4rem;
+                margin: 0.5em 0;
+            }
+        }
+        .gallery-con{
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(90% + 2rem);
+            .item{
+                overflow: hidden;
+                margin: 1rem;
+                width: calc(100% / 3 - 2rem);
+                height: 15rem;
+                background: darken($white, 3%);
+                border-radius: $radius;
             }
         }
     }

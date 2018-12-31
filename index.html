@@ -40,11 +40,53 @@
     </section>
     <section class="gallery-main">
         <div class="banner">
-            <div class="left arrow">
+            <div class="arrow left">
             </div>
-            <div class="right arrow">
+            <div class="arrow right">
+            </div>
+            <div class="img-con">
+                <div class="banner-img" style="background-image: url(images/tj-holowaychuk-113930-unsplash.jpg)"></div>
+                <div class="banner-img" style="background-image: url(images/tj-holowaychuk-113930-unsplash.jpg)"></div>
+                <div class="banner-img" style="background-image: url(images/tj-holowaychuk-113930-unsplash.jpg)"></div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery-main">
+        <div class="head">
+            <h1>Gallery</h1>
+        </div>
+        <div class="gallery-con">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
             </div>
         </div>
     </section>
 </body>
+<script>
+    document.querySelectorAll('.arrow').forEach(element => {
+       element.addEventListener('click', function(e){
+            e.preventDefault();
+            var struct = document.getElementsByClassName('banner-img');
+            if(e.toElement.classList[1] == 'left') {
+                var divAppend = struct[struct.length - 1];
+                console.log(divAppend);
+                
+                // document.getElementsByClassName('img-con')[0].appendChild(divAppend);
+                // divAppend.removeChild('banner-img');
+            } else if(e.toElement.classList[1] == 'right') {
+                var divAppend = struct[struct.length - struct.length];
+                console.log(divAppend);
+            }
+       }) 
+    });
+</script>
 </html>
