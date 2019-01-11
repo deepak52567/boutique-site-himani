@@ -13,15 +13,20 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="contact-con">
-            <div>
+            <a href="tel:+919826856925">
                 <i class="fas fa-phone"></i>
                 <span>Call Now</span>
-            </div>
-            <div>
+            </a>
+            <a href="https://www.google.com/maps/place/Patiala+House+Court/@28.6153948,77.2325358,17z/data=!3m1!4b1!4m5!3m4!1s0x390cfd37b03665eb:0xdcb12d2b0556fc8a!8m2!3d28.6153948!4d77.2347245" target="_blank">
                 <i class="fas fa-map-marked-alt"></i>
                 <span>Get Direction</span>
-            </div>
+            </a>
         </div>
+        <ul class="menu-con">
+            <li>Home</li>
+            <li>Gallery</li>
+            <li>Contact</li>
+        </ul>
     </header>
     <section class="top-main">
         <i class="fas fa-shopping-cart cart-art"></i>
@@ -88,5 +93,8 @@
             }
        }) 
     });
+    document.getElementsByClassName('ham-menu')[0].addEventListener('click', function(){
+        document.getElementsByClassName('menu-con')[0].classList.toggle('active');
+    })
 </script>
 </html>

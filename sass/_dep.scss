@@ -1,14 +1,16 @@
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+// @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+// @import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+// @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+// @import "../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
 
 $black: black;
 $white: #fff;
 $spaceVal: 3rem;
 $radius: 6px;
 $headerHeight: 4.5rem;
+$theme: #e7d4cf;
+
 
 body {
   background: $white;
