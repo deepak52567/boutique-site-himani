@@ -10,11 +10,11 @@ header{
     left: 0;
     right: 0;
     display: flex;
-    background: lighten($theme, 10%);
+    background: $theme;
     height: $headerHeight;
     justify-content: space-between;
     padding: 0 $spaceVal;
-    color: lighten($black, 30%);
+    color: white;
     font-size: 1rem;
     box-shadow: 0 -15px 80px -20px lighten($black, 60%);
     align-items: center;
@@ -26,7 +26,7 @@ header{
         height: calc(100vh - #{$headerHeight});
         left: 0;
         right: 0;
-        background: lighten($theme, 51%);
+        background: $theme;
         list-style: none;
         display: flex;
         align-items: center;
@@ -37,11 +37,11 @@ header{
         opacity: 0;
         transition: all 0.3s ease-in-out;
         li{
-            color: lighten($black, 50%);
+            color: white;
             font-size: 2.5rem;
             margin: 0.5em 0;
             &:hover{
-                text-decoration: underline $theme;
+                text-decoration: underline darken($theme, 15%);
                 text-decoration-style: double;
             }
             a{
@@ -56,13 +56,13 @@ header{
     .ham-menu {
         padding: 0.5em;
         font-size: 1.5rem;
-        color: lighten($black, 40%);
+        color: darken($theme, 15%);
     }
     .contact-con{
         display: flex;
         align-items: center;
         a{
-            color: $black;
+            color: white;
             border-radius: $radius;       
             margin-left: 1rem;
             padding: 0.6rem 1rem;
@@ -71,10 +71,10 @@ header{
             position: relative;
             i{
                 margin-right:   0.5rem;
-                color: $theme; 
+                color: darken($theme, 15%); 
             }
             &::after{
-                background: transparentize($theme, 0.85);   
+                background: darken($theme, 2%);
                 transition: all 0.3s ease-in-out;
                 content: '';
                 position: absolute;
@@ -85,6 +85,7 @@ header{
                 transform-origin: bottom;
                 transform: scaleY(0) skewY(20deg) rotateX(5deg) translateY(100%);
                 opacity: 0;
+                z-index: -1;
             }
             &:hover{
                 &::after{
@@ -101,17 +102,151 @@ section{
     &.top-main {
         margin-top: $headerHeight; 
         min-height: calc(100vh - #{$headerHeight});
-        overflow: hidden;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        .cart-art{
+        position: relative;
+        .pattern-con{
+            left: 0;
+            right: 0;
             position: absolute;
-            top: 6vw;
-            left: -40vw;  
-            color: transparentize($theme, 0.86);
-            font-size: 60vw; 
+            bottom: 0;
+            top: 0;
+            .left-pt-1{
+                position: absolute;
+                left: -5%;
+                bottom: -5%;
+                height: 23vw;
+                width: 23vw;
+                background: lighten($theme, 8%);
+                border-radius: 50%;
+                z-index: 1;
+                // box-shadow: 0 -15px 50px -15px transparentize($black, 0.8);
+            }
+            .left-pt-2{
+                position: absolute;
+                left: -5%;
+                bottom: -5%;
+                height: 23vw;
+                width: 23vw;
+                background: lighten($theme, 5%);
+                border-radius: 50%;
+                // box-shadow: 0 -15px 80px -20px transparentize($black, 0.8);
+                transform: scale(1.2);
+            }
+            .cart-art{
+                position: absolute;
+                bottom: 3vw;
+                left: 2vw;  
+                color: lighten($theme, 0%);
+                font-size: 18vw; 
+                z-index: 1;
+                filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
+            }
+            .bag-con{
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;  
+                color: lighten($theme, 0%);
+                z-index: 1;
+                // filter: drop-shadow(0 -15px 50px transparentize($black, 0.8));
+                i{
+                    font-size: 18vw; 
+                    transform: rotate(-90deg) translateY(5vw);
+                }
+            }
+            .gem-con{
+                position: absolute;
+                bottom: 3rem;
+                right: 3rem;  
+                width: 15rem;
+                height: 15rem;
+                color: lighten($theme, 5%);
+                z-index: 1;
+                // filter: drop-shadow(0 0 10px transparentize($black, 0.9));
+                i{
+                    position: absolute;
+                    font-size: 2rem;
+                    @keyframes RotRan1 {
+                        0%{
+                            transform: rotate(45deg) translate(0, 0);
+                        }
+                        25%{
+                            transform: rotate(48deg) translate(5%, 0);
+                        }
+                        50%{
+                            transform: rotate(50deg) translate(0, 5%);
+                        }
+                        75%{
+                            transform: rotate(48deg) translate(2%, 2%);
+                        }
+                        100%{
+                            transform: rotate(45deg) translate(0, 0);
+                        }
+                    }
+                    @keyframes RotRan2 {
+                        0%{
+                            transform: rotate(10deg) translate(0,0);
+                        }
+                        25%{
+                            transform: rotate(18deg) translate(0,8%);
+                        }
+                        50%{
+                            transform: rotate(20deg) translate(9%,0);
+                        }
+                        75%{
+                            transform: rotate(12deg) translate(8%,0);
+                        }
+                        100%{
+                            transform: rotate(10deg) translate(0,0);
+                        }
+                    }
+                    @keyframes RotRan3 {
+                        0%{
+                            transform: rotate(-30deg);
+                            color: lighten($theme, 5%);
+                        }
+                        25%{
+                            transform: rotate(-35deg);
+                            color: lighten($theme, 2%);
+                        }
+                        50%{
+                            transform: rotate(-25deg);
+                            color: lighten($theme, 0%);
+                        }
+                        75%{
+                            transform: rotate(-28deg);
+                            color: lighten($theme, 2%);
+                        }
+                        100%{
+                            transform: rotate(-30deg);
+                            color: lighten($theme, 5%);
+                        }
+                    }
+                    &:nth-child(1){
+                        animation: RotRan1 10s infinite;
+                        top: calc(50% - 2rem);
+                        left: calc(50% - 2rem);
+                        transform: rotate(45deg) translate(0, 0);
+                        font-size: 4rem;
+                    }
+                    &:nth-child(2){
+                        animation: RotRan2 8s infinite;
+                        top: calc(20% - 1rem);
+                        left: calc(30% - 1rem);
+                        transform: rotate(10deg) translate(0,0);
+                    }
+                    &:nth-child(3){
+                        animation: RotRan3 8s infinite;
+                        bottom: calc(40% - 1.5rem);
+                        left: calc(10% - 1.5rem);
+                        transform: rotate(-30deg);
+                        font-size: 3rem;
+                    }
+                }
+            }
         }
         .head{
             margin: 1em 0 1em 0;
@@ -175,6 +310,7 @@ section{
         align-items: center;
         justify-content: center;
         .banner{
+            margin-top: 8rem;
             overflow: hidden;
             width: 90%;
             height: 70vh;
@@ -277,6 +413,95 @@ section{
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
+            }
+        }
+    }
+}
+
+footer{
+    overflow: hidden;
+    padding: $spaceVal $spaceVal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .head{
+        text-align: center;
+        h1{
+            font-family: 'Rubik', sans-serif;
+            color: lighten($black, 20%);
+            font-size: 4rem;
+            margin: 0.5em 0;
+            margin-bottom: 0;
+        }
+        p{
+            margin: 0;
+            color: $black;
+            margin-bottom: 1em
+        }
+    }
+    .contact-foot{
+        display: flex;
+        & > i{
+            position: absolute;
+            bottom: -3vw;
+            right: -8vw;  
+            color: lighten($theme, 0%);
+            font-size: 18vw; 
+            z-index: 1;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
+        }
+        .left-pt-1{
+            position: absolute;
+            left: -5%;
+            bottom: -30%;
+            height: 23vw;
+            width: 23vw;
+            background: lighten($theme, 8%);
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 -15px 50px -15px transparentize($black, 0.8);
+        }
+        .left-pt-2{
+            position: absolute;
+            left: -0%;
+            bottom: -15%;
+            height: 23vw;
+            width: 23vw;
+            background: lighten($theme, 5%);
+            border-radius: 50%;
+            // box-shadow: 0 -15px 80px -20px transparentize($black, 0.8);
+            transform: scale(1.2);
+        }
+        .right{
+            padding: 1em;
+            background: lighten($theme, 7%);
+            border-radius: $radius;
+            margin: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .row{
+                margin-bottom: 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                label{
+                    margin: 0;
+                    font-size: 1rem;
+                    color: $black;
+                }
+                i{
+                    color: lighten($theme, 10%);
+                    font-size: 2.5rem; 
+                }
+                p{
+                    font-weight: bold;
+                    color: darken($theme, 15%);
+                    margin: 0;
+                    line-height: 2em;
+                    font-size: 2rem;
+                }
             }
         }
     }

@@ -1,3 +1,37 @@
+@media(max-width: 1023px) {
+    section {
+        &.top-main {
+            .pattern-con {
+                .left-pt-1 {
+                    height: 30vw;
+                    width: 30vw;    
+                }
+
+                .left-pt-2 {
+                    height: 30vw;
+                    width: 30vw;    
+                }
+
+                .cart-art {
+                    font-size: 23vw;
+                    bottom: 5vw; 
+                }
+
+                .bag-con {
+                    i{
+                        font-size: 23vw;
+                    }
+                }
+
+                .gem-con{
+                    bottom: 0;
+                    right: 0; 
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: 767px) {
     section {
         &.top-main {
@@ -5,14 +39,40 @@
                 h1 {
                     font-size: 4rem;
                 }
+
                 h5 {
                     font-size: 1.5rem;
                 }
             }
-            .time-con{
-                h6{
+
+            .time-con {
+                h6 {
                     font-size: 1.4rem;
                     line-height: 1.4rem;
+                }
+            }
+
+            .pattern-con {
+                .gem-con{
+                    height: 10rem;
+                    width: 10rem;
+                    i{
+                        font-size: 1.5rem;
+                        &:nth-child(1){
+                            top: calc(60% - 1.5rem);
+                            left: calc(60% - 1.5rem);
+                            font-size: 3rem;                        
+                        }
+                        &:nth-child(2){
+                            top: calc(30% - 0.75rem);
+                            left: calc(30% - 0.75rem);
+                        }
+                        &:nth-child(3){
+                            bottom: calc(30% - 1.12rem);
+                            left: calc(10% - 1.12rem);
+                            font: 2.25rem;
+                        }
+                    }
                 }
             }
         }
@@ -31,13 +91,13 @@
     header {
         padding: 0 1.5rem;
 
-        .contact-con{
-            a{
+        .contact-con {
+            a {
                 padding: 0.6rem;
-                i{
 
-                }
-                span{
+                i {}
+
+                span {
                     display: none;
                 }
             }
@@ -47,23 +107,68 @@
 
     section {
         padding: 1rem 1.5rem;
+
         &.top-main {
             .head {
                 h1 {
                     font-size: 3rem;
                 }
+
                 h5 {
                     font-size: 1.3rem;
                 }
             }
-            .contact-con{
+
+            .contact-con {
                 font-size: 1.5rem;
+                margin-bottom: 1em;
+            }
+            .time-con{
+                margin-bottom: 1em;
             }
         }
+
         &.gallery-main {
-            .banner{
+            .banner {
                 width: 100%;
                 height: 40vh;
+            }
+        }
+    }
+    
+    footer {
+        padding: 1rem 1.5rem;
+        .head{
+            margin-bottom: 1em;
+        }
+        .contact-foot{
+            & > i{
+                bottom: -3vw;
+                right: -10vw;  
+                font-size: 25vw; 
+            }
+            .left-pt-1{
+                left: -15%;
+                bottom: -30%;
+                height: 30vw;
+                width: 30vw;
+            }
+            .left-pt-2{
+                left: -10%;
+                bottom: -15%;
+                height: 30vw;
+                width: 30vw;
+            }
+            .right{
+                .row{
+                    i{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+
+                    }
+                }
             }
         }
     }
@@ -71,48 +176,85 @@
 
 @media(max-width: 410px) {
     section {
-        &.top-main{
-            min-height: calc(80vh - 4.5rem);
+        &.top-main {
             margin-bottom: 2rem;
-            .head{
-                h1{
+            .pattern-con {
+                .left-pt-1 {
+                    left: -10%;
+                    bottom: -10%;
+                    height: 45vw;
+                    width: 45vw;    
+                }
+
+                .left-pt-2 {
+                    left: -10%;
+                    bottom: -10%;
+                    height: 45vw;
+                    width: 45vw;    
+                }
+
+                .cart-art {
+                    font-size: 30vw;
+                    bottom: 2vw;
+                    left: 4vw;
+                }
+
+                .bag-con {
+                    i{
+                        font-size: 30vw;
+                    }
+                }
+            }
+            .head {
+                h1 {
                     font-size: 2.5rem;
                 }
 
-                h5{
+                h5 {
                     font-size: 1.1rem;
                 }
             }
 
-            .time-con{
-                h6{
+            .time-con {
+                h6 {
                     font-size: 1.1rem;
                 }
 
-                p{
+                p {
                     font-size: 1.2rem;
                 }
             }
 
-            .contact-con{
+            .contact-con {
                 padding: 0.8rem 1.6rem;
                 font-size: 1.3rem;
             }
         }
 
-        &.gallery-main{
-            .head{
-                h1{
+        &.gallery-main {
+            .head {
+                h1 {
                     font-size: 2.5rem;
                 }
             }
 
-            .gallery-con{
-                .item{
+            .gallery-con {
+                .item {
                     width: 100%;
                     margin-left: 0;
                     margin-right: 0;
                 }
+            }
+        }
+    }
+    footer {
+        .head {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h5 {
+                font-size: 1.1rem;
             }
         }
     }
